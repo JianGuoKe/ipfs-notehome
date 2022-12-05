@@ -1,0 +1,40 @@
+{
+  "name": "@jianguoke/ipfs-notehome",
+  "version": "1.0.0",
+  "description": "区块链记事本的介绍页",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JianGuoKe/ipfs-notehome.git"
+  },
+  "keywords": [
+    "ipfs",
+    "notebook",
+    "website"
+  ],
+  "author": "jianguoke.cn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JianGuoKe/ipfs-notehome/issues"
+  },
+  "homepage": "https://github.com/JianGuoKe/ipfs-notehome#readme",
+  "devDependencies": {
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0",
+    "scss": "^0.2.4",
+    "vite": "^3.2.5"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.2",
+    "font-awesome": "4.7.0",
+    "jquery": "3.3.1",
+    "jquery.easing": "^1.4.1",
+    "magnific-popup": "^1.1.0",
+    "scrollreveal": "3.3.6"
+  }
+}

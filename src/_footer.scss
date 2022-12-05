@@ -1,0 +1,27 @@
+.title{
+  margin: 1rem;
+}
+
+h4{
+  margin: 1rem 0;
+  color: rgba(255,255,255,.7);
+  font-size: 1rem;
+
+  img{
+    padding-right: 10px;
+  }
+}
+
+.menu{
+  margin: 1rem;
+  a{
+    color: $white;
+    margin: 0 .5rem;
+  }
+}
+
+.copyright{
+	a{
+	color: $white;
+	}
+}

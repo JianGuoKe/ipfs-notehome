@@ -1,0 +1,63 @@
+// Styling for the masthead
+
+header.masthead {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 56px);
+  //background-image: url('../img/header.jpg');
+  background-position: center center;
+  @include background-cover;
+
+  hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-weight: 300;
+  }
+
+  .things {
+    margin-bottom: 1rem;
+
+    button {
+      margin: 0.3rem;
+    }
+  }
+  @media (min-width: 768px) {
+    p {
+      font-size: 1.15rem;
+    }
+  }
+  @media (min-width: 992px) {
+    height: 100vh;
+    min-height: 650px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+
+  &.joinus {
+    //background-image: url('../img/header2.jpg');
+  }
+
+  &.download {
+    background-image: radial-gradient(ellipse closest-side at 50% 50%, #393e44, #36383b 25%, #343233);
+    background-repeat: no-repeat;
+
+    .dropdown-toggle {
+      padding-top: 16px;
+    }
+  }
+}
