@@ -19,7 +19,9 @@ const opts = {
   topic: 'notehome',// 自定义日志主题。
   source: location.hostname ,
   tags: {
-   cid: new Date().getTime().toString()
+   cid: new Date().getTime().toString(),
+   ua: navigator.userAgent,
+   referer: document.referrer
   }
 }
 const tracker = new SlsTracker(opts);
@@ -27,8 +29,6 @@ const tracker = new SlsTracker(opts);
 tracker.send({
   page: document.title,
   type: 'open',
-  ua: navigator.userAgent,
-  referer: referer: document.referrer
 })
 
 $('a').click(function(){
