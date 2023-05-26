@@ -8,6 +8,28 @@ import 'bootstrap/dist/js/bootstrap.js'
 import 'jquery.easing'
 import ScrollReveal from 'scrollreveal'
 
+import SlsTracker from '@aliyun-sls/web-track-browser';
+
+const opts = {
+  host: 'cn-zhangjiakou.log.aliyuncs.com', // 所在地域的服务入口。例如cn-hangzhou.log.aliyuncs.com
+  project: 'jianguoke', // Project名称。
+  logstore: 'uba', // Logstore名称。
+  time: 10, // 发送日志的时间间隔，默认是10秒。
+  count: 10, // 发送日志的数量大小，默认是10条。
+  topic: 'ub',// 自定义日志主题。
+  source: 'notehome',
+  tag: 'btnclick'
+}
+const tracker = new SlsTracker(opts);
+
+$('a').click(function(){
+  var btn = $(this);
+  tracker.send({
+    href: btn.attr('href'),
+    text: btn.text()
+  })
+})
+
 // Smooth scrolling using jQuery easing
 $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
   if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {

@@ -4,7 +4,7 @@
   "description": "区块链记事本的介绍页",
   "main": "index.js",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host --open",
     "build": "vite build --base=https://static.jianguoke.cn/home/"
   },
   "repository": {
@@ -29,11 +29,13 @@
     "vite": "^3.2.5"
   },
   "dependencies": {
-    "bootstrap": "^4.6.2",
+    "@aliyun-sls/web-track-browser": "^0.2.6",
+    "bootstrap": "^4.6.1",
     "font-awesome": "4.7.0",
     "jquery": "3.3.1",
     "jquery.easing": "^1.4.1",
     "magnific-popup": "^1.1.0",
+    "popper.js": "^1.16.1",
     "scrollreveal": "3.3.6"
   }
 }
