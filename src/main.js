@@ -28,7 +28,7 @@ tracker.send({
   page: document.title,
   type: 'open',
   ua: navigator.userAgent,
-  referer: navigator.referer || ''
+  referer: referer: document.referrer
 })
 
 $('a').click(function(){
