@@ -4,7 +4,7 @@
   "description": "区块链记事本的介绍页",
   "main": "index.js",
   "scripts": {
-    "dev": "vite --host --open",
+    "dev": "vite --host --open --port 5211",
     "build": "vite build --base=https://static.jianguoke.cn/home/"
   },
   "repository": {

@@ -6,7 +6,7 @@ import $ from 'jquery/dist/jquery.js'
 import 'bootstrap/dist/js/bootstrap.js'
 
 import 'jquery.easing'
-import ScrollReveal from 'scrollreveal'
+// import ScrollReveal from 'scrollreveal'
 
 import SlsTracker from '@aliyun-sls/web-track-browser';
 
@@ -16,17 +16,28 @@ const opts = {
   logstore: 'uba', // Logstore名称。
   time: 10, // 发送日志的时间间隔，默认是10秒。
   count: 10, // 发送日志的数量大小，默认是10条。
-  topic: 'ub',// 自定义日志主题。
-  source: 'notehome',
-  tag: 'btnclick'
+  topic: 'notehome',// 自定义日志主题。
+  source: location.hostname ,
+  tags: {
+   cid: new Date().getTime().toString()
+  }
 }
 const tracker = new SlsTracker(opts);
+ 
+tracker.send({
+  page: document.title,
+  type: 'open',
+  ua: navigator.userAgent,
+  referer: navigator.referer || ''
+})
 
 $('a').click(function(){
   var btn = $(this);
   tracker.send({
-    href: btn.attr('href'),
-    text: btn.text()
+    page: document.title,
+    type: 'click',
+    url: btn.attr('href'),
+    name: btn.text()
   })
 })
 
@@ -69,19 +80,19 @@ navbarCollapse();
 $(window).scroll(navbarCollapse);
 
 // Scroll reveal calls
-window.sr = ScrollReveal();
-sr.reveal('.sr-icons', {
-  duration: 600,
-  scale: 0.3,
-  distance: '0px'
-}, 200);
-sr.reveal('.sr-button', {
-  duration: 1000,
-  delay: 200
-});
-sr.reveal('.sr-contact', {
-  duration: 600,
-  scale: 0.3,
-  distance: '0px'
-}, 300);
+// window.sr = ScrollReveal();
+// sr.reveal('.sr-icons', {
+//   duration: 600,
+//   scale: 0.3,
+//   distance: '0px'
+// }, 200);
+// sr.reveal('.sr-button', {
+//   duration: 1000,
+//   delay: 200
+// });
+// sr.reveal('.sr-contact', {
+//   duration: 600,
+//   scale: 0.3,
+//   distance: '0px'
+// }, 300);
 
