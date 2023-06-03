@@ -10,6 +10,15 @@ import 'jquery.easing'
 
 import SlsTracker from '@aliyun-sls/web-track-browser';
 
+console.log(
+  `
+    __ _____ _____ _____ _____ _____ _____ _____ _____ 
+ __|  |     |  _  |   | |   __|  |  |     |  |  |   __|
+|  |  |-   -|     | | | |  |  |  |  |  |  |    -|   __|
+|_____|_____|__|__|_|___|_____|_____|_____|__|__|_____|
+`
+);
+
 const opts = {
   host: 'cn-zhangjiakou.log.aliyuncs.com', // 所在地域的服务入口。例如cn-hangzhou.log.aliyuncs.com
   project: 'jianguoke', // Project名称。
